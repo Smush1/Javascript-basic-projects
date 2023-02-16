@@ -17,5 +17,17 @@ btn.addEventListener("click", function(e){
             num = 0
           }
           valueDisplay.textContent=num
+
+          if(num > 0) {
+            valueDisplay.style.color = "green"
+          }
+
+          else if (num < 0) {
+            valueDisplay.style.color = "red"
+          }
+
+          else {
+            valueDisplay.style.color = "black"
+          }
 } )
 })
