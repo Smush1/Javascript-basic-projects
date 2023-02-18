@@ -30,3 +30,80 @@ const reviews = [
     },
   ];
   
+  // select items //
+
+const img = document.getElementById("person-img")
+const author = document.getElementById("author")
+const job = document.getElementById("job")
+const info = document.getElementById("info")
+
+const btns = document.querySelectorAll(".btn")
+
+
+/* const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+const randomBtn = document.querySelector(".random-btn") */
+
+  // set starting item //
+let currentItem = 0;
+
+// load initial item
+
+btns.forEach( function(btn){
+  btn.addEventListener("click", function(e){
+    const styles = e.currentTarget.classList
+    if(styles.contains("prev-btn")){
+      currentItem--
+           console.log(currentItem)
+              if (currentItem < 0)
+                {currentItem = reviews.length - 1}
+                 
+
+    }
+    else if(styles.contains("next-btn")){
+                  currentItem++
+                  console.log(currentItem)
+                      if (currentItem > reviews.length -1)
+                            { currentItem = 0 }
+                }
+
+    else 
+              {currentItem = Math.floor(Math.random()*4)}
+              showPerson()
+      })
+})
+
+
+/* prevBtn.addEventListener("click" , function(){
+          
+           currentItem--
+           console.log(currentItem)
+              if (currentItem < 0)
+                {currentItem = reviews.length - 1}
+                  showPerson()
+          
+})
+
+nextBtn.addEventListener("click" , function (){
+              currentItem++
+              console.log(currentItem)
+                  if (currentItem > reviews.length -1)
+                        { currentItem = 0 }
+                          showPerson()
+                        
+})
+
+randomBtn.addEventListener("click", function(){
+        currentItem = Math.floor(Math.random()*4)
+        showPerson()
+  }) */
+
+function showPerson(){
+  const item = reviews[currentItem] 
+  author.textContent = item.name 
+  img.src = item.img
+  job.textContent= item.job
+  info.textContent = item.text
+
+}  
+
