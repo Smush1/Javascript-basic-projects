@@ -1,0 +1,18 @@
+div.image-container{
+   width: 90%;
+    height: auto;
+    display: inline;
+}
+
+.btn-left{
+    float: left;
+}
+
+.btn-right{
+    float: right;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+}
