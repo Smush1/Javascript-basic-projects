@@ -14,6 +14,6 @@ btn.addEventListener("click", function(){
     let hexColor = `#${result}`
     document.body.style.background = hexColor
     color.textContent = hexColor
-
+    console.log(result)
     
 })

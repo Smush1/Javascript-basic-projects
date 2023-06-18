@@ -5,14 +5,22 @@ let imagesIds=[
     },
     {
     "id": 2,
-    "image": "Herbingedients.jpg"
+    "image": "https://www.gstatic.com/webp/gallery/3.webp"
     },
     {
     "id": 3,
-    "image": "Herbingr.jpg"
+    "image": "https://www.gstatic.com/webp/gallery/4.webp"
     },
     {
     "id": 4,
+    "image": "https://www.gstatic.com/webp/gallery/5.webp"
+    },
+    {
+    "id": 5,
+    "image": ""
+    },
+    {
+    "id": 6,
     "image": "Digantalogo.jpeg"
     }
 ]

@@ -6,7 +6,7 @@ let num=0
 
 btns.forEach(function (btn)
 {
-btn.addEventListener("click", function(e){
+btn.addEventListener("click", (e) => {
    let action =  e.currentTarget.classList
         if (action.contains("decrease")){
                 num--
@@ -19,6 +19,7 @@ btn.addEventListener("click", function(e){
           valueDisplay.textContent=num
 
           if(num > 0) {
+            
             valueDisplay.style.color = "green"
           }
 

@@ -50,7 +50,7 @@ let currentItem = 0;
 // load initial item
 
 btns.forEach( function(btn){
-  btn.addEventListener("click", function(e){
+  btn.addEventListener("click", (e) => {
     const styles = e.currentTarget.classList
     if(styles.contains("prev-btn")){
       currentItem--
