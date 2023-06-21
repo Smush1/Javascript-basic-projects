@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabs</title>
-</head>
-<body>
-    
-</body>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+        <div class="title">
+          <h2>about</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ipsa aperiam libero </p>
+        </div>
+        <div class="about-center section-center">
+            <article>
+                <img src="./hero-bcg.jpeg" alt="about picture "/>
+            </article>
+ <article class="about">
+    <!-- btn -container -->
+    <div class="btn-container">
+        <button class="tab-btn active" data-id="history">history</button>
+        <button class="tab-btn" data-id="vision">vision</button>
+        <button class="tab-btn" data-id="goals">goals</button>
+    </div> 
+    <article class="about-content">
+        <!-- single item -->
+        <div class="content active" id="history">
+            <h4>history</h4>
+             <!-- history -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga soluta unde architecto placeat! Eos sint quibusdam, aspernatur aut voluptates natus itaque officiis earum perferendis quo dignissimos maiores. Assumenda tempore excepturi possimus officiis vel officia, quibusdam aliquid quos iste perspiciatis hic magnam totam! Consequatur labore quidem expedita facilis, magnam veniam quibusdam.</p>
+        </div>
+        <!-- single item -->
+        <!-- single item -->
+        <div class="content" id="vision">
+            <h4>vision</h4>
+            <!-- vision -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsa nesciunt delectus temporibus hic ipsum esse dicta quas, mollitia assumenda!</p>
+        </div>
+        <!-- single item -->
+        <!-- single item -->
+        <div class="content" id="goals">
+            <h4>goals</h4>
+             <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda voluptatem nobis odit voluptatum, earum veniam magni maxime, eaque fuga reiciendis perspiciatis minima ad, consequatur nulla velit ducimus fugit numquam libero?
+                <ul>
+                    <li> One </li>
+                    <li> Two </li>
+                    <li> Three </li>
+                </ul>
+             </p>
+        </div>
+        <!-- single item -->
+    </article>   
+        </article>
+        
+        </div>
+    </section>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
 </html>
