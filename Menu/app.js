@@ -71,38 +71,74 @@ const menu = [
       img: "./images/item-9.jpeg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
+    {
+      id: 10,
+      title: "Steak Dinner",
+      category: "Dinner",
+      price: 39.99,
+      img: "./images/item-10.jpeg",
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
   ];
   
-const filterBtns = document.querySelectorAll(".filter-btn")
+//const filterBtns = document.querySelectorAll(".filter-btn")
+
+const buttonContainer = document.querySelector(".btn-container")
 
 
 
 const sectionCenter = document.querySelector(".section-center")
 //load items
 window.addEventListener("DOMContentLoaded", function(){
-    displayMenuItems(menu)
-})
+    displayMenuItems(menu) 
+    const categories = menu.reduce((values, item)=> {
+      if (!values.includes(item.category)){
+        values.push(item.category);
+      }
+      return values;
+    },
+    ['all']
+    );
+    //console.log(categories)
+    const categoryBtns = categories.map((category)=> {
+      return `<button class="filter-btn" type="button" data-id=${category}> ${category}  </button>`
+    })
+    .join("");
+    //console.log(categoryBtns)
+
+    buttonContainer.innerHTML = categoryBtns;
+    const filterBtns = document.querySelectorAll(".filter-btn")
+    console.log(filterBtns)
 
 //filter Buttons
-filterBtns.forEach(function(btn){
-  btn.addEventListener("click",function(e){
-    const category= e.currentTarget.dataset.id
-    const menuCategory = menu.filter( function (menuItem){
-      //console.log(menuItem.category)
-        if (menuItem.category === category){
-          return menuItem
+    filterBtns.forEach(function(btn){
+      btn.addEventListener("click",function(e){
+        const category= e.currentTarget.dataset.id;
+        console.log(category)
+        const menuCategory = menu.filter( function (menuItem){
+          //console.log(menuItem.category)
+            if (menuItem.category === category){
+              return menuItem
+            }
+    
+          
+        })
+    
+        console.log(menuCategory)
+        if(category ==="all"){
+          displayMenuItems(menu)
         }
-      
+        else{
+          displayMenuItems(menuCategory)
+        }
+       // console.log(menuCategory)
+      })
     })
-    if(category ==="all"){
-      displayMenuItems(menu)
-    }
-    else{
-      displayMenuItems(menuCategory)
-    }
-   // console.log(menuCategory)
-  })
+
 })
+
+
+
 
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map(function(item){
