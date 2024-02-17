@@ -4,16 +4,20 @@ const btn = document.getElementById("btn")
 const color= document.querySelector(".color")
 
 btn.addEventListener("click", function(){
-    let result = 0
+    hexColor = "#"
 
-    for(let i=0; i< 5; i++){
+    for(let i=0; i< 6; i++){
         
-       
-        result += hex[Math.floor(Math.random()* hex.length)]
+  
+        hexColor += hex[getRandomNumbers()]
     }
-    let hexColor = `#${result}`
+
     document.body.style.background = hexColor
     color.textContent = hexColor
-    console.log(result)
     
 })
+
+
+function getRandomNumbers(){
+    return Math.floor(Math.random()* hex.length)
+}
