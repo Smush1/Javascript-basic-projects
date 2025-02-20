@@ -66,7 +66,6 @@ function createPost(post,callback){
     
 }
 
-getPosts()
 
 createPost({title : 'Post three', body : 'This is third post'}, getPosts ) */
 

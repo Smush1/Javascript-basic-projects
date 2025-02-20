@@ -18,7 +18,7 @@ function getPosts(){
     let promise0 = new Promise((resolve, reject)=>{
         setTimeout(()=>{
             posts.push(post)
-            const error = false;
+            const error = true;
         if(!error){
             resolve();
         }
@@ -35,8 +35,8 @@ function getPosts(){
 
 /* createPost({title : 'Post Three', body: 'This is post three'})
 .then(getPosts)
-.catch(err => console.log(err)) */
-
+.catch(err => console.log(err))
+ */
 
 
 
@@ -55,7 +55,7 @@ init()
 
 
 
-async function fetchUsers(){
+/* async function fetchUsers(){
    const res = await fetch('https://jsonplaceholder.typicode.com/users');
 
    const data = await res.json()
@@ -65,7 +65,32 @@ async function fetchUsers(){
 }
 
 
-fetchUsers();
+fetchUsers(); */
+
+
+
+
+
+
+
+
+
+/*   ||  Promise.all   */
+
+/* const promise1 = Promise.resolve('Hello World');
+const promise2 = 10;
+const promise3 = new Promise((resolve, reject)=> {
+    setTimeout( resolve , 2000, 'Goodbye')
+})
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users')
+.then(
+    (res)=> res.json()
+    )
+
+
+Promise.all([promise1, promise2, promise3,promise4]).then((values)=>console.log(values)) */
+
+
 
 
 
@@ -93,26 +118,13 @@ let promise = new Promise((resolve, reject)=>{
 
 setTimeout( ()=>{
     para2.innerHTML = "Hello 2"
+    promise.then((value)=>{
+        para3.innerHTML = value;
+    })
     console.log(promise)
 },3000)
 
 para3.innerHTML = "Hello 3"
 
 
-
-
-
-/*   ||  Promise.all   */
-
-/* const promise1 = Promise.resolve('Hello World');
-const promise2 = 10;
-const promise3 = new Promise((resolve, reject)=> {
-    setTimeout( resolve , 2000, 'Goodbye')
-})
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users')
-.then(
-    (res)=> res.json()
-    )
-
-
-Promise.all([promise1, promise2, promise3,promise4]).then((values)=>console.log(values)) */
+// End of some thing random

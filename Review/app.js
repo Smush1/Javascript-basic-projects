@@ -30,7 +30,7 @@ const reviews = [
     },
   ];
   
-  // select items //
+  // select items // 
 
 const img = document.getElementById("person-img")
 const author = document.getElementById("author")
